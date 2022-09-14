@@ -1,0 +1,15 @@
+<style>
+h1{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #AADEE0;
+    color: Black;
+}
+
+div {
+   border: 1px solid black;
+   margin: 25px 50px 75px;
+   background-color: lightblue;
+    }
+</style>

@@ -1,0 +1,261 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css" integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+
+  <title>Bootstrap Carousel</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js">  
+  <style>
+    <style>
+     
+      img {
+           width: 40%;
+        }
+            
+      .carousel-inner {
+            background-color: #C1E0FF;
+      }
+          
+      .carousel-caption {
+            font-size: 1em;
+            right: 5%;
+            left: 60%;
+            top: 30%;
+            bottom: 30%;
+            text-align: left;
+            text-shadow: none;
+           }
+      .carousel-indicators{
+            font-size: 1em;
+            bottom: 0%;
+            text-align: left;
+            text-shadow: none;
+              }
+              
+      /***
+       * Bootstrap relies on CSS transitions for animation, which makes it
+       * easy to override.  Just add the vertical class to your carousel:
+       * <div class='carousel vertical'>...</div>
+       ***/
+      
+      .carousel.vertical .carousel-inner {
+        height: 100%;
+      }
+      .carousel.vertical .item {
+        -webkit-transition: 0.6s ease-in-out top;
+        -moz-transition:    0.6s ease-in-out top;
+        -ms-transition:     0.6s ease-in-out top;
+        -o-transition:      0.6s ease-in-out top;
+        left:               0;
+      }
+      .carousel.vertical .active,
+      .carousel.vertical .next.left,
+      .carousel.vertical .prev.right    { top:     0; }
+      .carousel.vertical .next,
+      .carousel.vertical .active.right  { top:  100%; }
+      .carousel.vertical .prev,
+      .carousel.vertical .active.left   { top: -100%; } 
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
+
+</head>
+
+<body style="background-color:#CCCCCC; margin-left: 50px;">
+  
+
+ 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <title>SUPRIME INDUSTRIES</title>
+  </head>
+  <body style="background-color:#ffffff;">
+
+   
+    <h1 style="color:#2B5D8E; text-align: center;">SUPRIME INDUSTRIES</h1>
+   
+   
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+   
+
+      
+    <h4 style="color:#0099cc;" > <b><i>About :</i></b></h4>
+
+        
+        <table class="table" align ="center">
+          <thead>
+            <tr>
+              
+              
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              
+              <td><b>Company Name :</b></td>
+              <td>Suprime Industries</td>
+              
+            </tr>
+            <tr>
+              
+              <td><b>Office Address :</b></td>
+              <td>Sr.No-18,Shivmanda 
+                Niwas,Shivganeshnagar,Dhawde wasti,Bhosari 
+                Pune 411039</td>
+              
+            </tr>
+            <tr>
+              
+              <td><b>Nature of Business :</b></td>
+              <td>Electrical  ,Instrumentation & Mechanical Contractors
+              </td>
+              
+            </tr>
+            <tr>
+              
+              <td><b>Name of Director :</b></td>
+              <td>Mr. Nilesh Karanje
+              </td>
+              
+            </tr>
+            <tr>
+              
+              <td><b>Year of Establishment :</b></td>
+              <td>2018
+              </td>
+              
+            </tr>
+            <tr>
+              
+              <td><b>Field of Activities :</b></td>
+              <td>Mechanical Electrical Instrumentation
+              </td>
+              
+            </tr>
+            <tr>
+              
+              <td><b>Our Bankers :</b> </td>
+              <td>
+                Kotak Mahindra 
+                Bank Pune
+              </td>
+              
+            </tr>
+            <tr>
+              
+              <td><b>Pan no. :</td>
+              <td>FFIPK7984
+              </td>
+              
+            </tr>
+            <tr>
+              
+              <td><b>GST Registration No. :</b></td>
+              <td>27FFIPK7984B1Z1
+              </td>
+              
+            </tr>
+            <tr>
+              
+              <td><b>Shopact No :</b></td>
+              <td>21310000315367169
+
+              </td>
+              
+            </tr>
+            <tr>
+              
+              <td><b>UDYAM Ragistration No:</b></td>
+              <td>UDYAM-MH-26-0121010
+
+
+              </td>
+              
+            </tr>
+           
+          </tbody>
+        </table>
+        <div align ="center" class="container">
+          <h4 style="color:#0099cc; text-align: center;" > <b><i>Our Clients</i></b></h4>
+          <!--The main div for carousel-->
+          <div id="carousel-demo" class="carousel vertical slide" data-ride="carousel" data-interval="2000">
+           <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-demo" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-demo" data-slide-to="1"></li>
+              <li data-target="#carousel-demo" data-slide-to="2"></li>
+              <li data-target="#carousel-demo" data-slide-to="3"></li>
+            </ol>
+            
+            <!-- Sliding images statring here --> 
+             <div class="carousel-inner"> 
+              <div class="item active"> 
+                <img SRC="{% static 'D:\R folder\STUDY\gitplayer\gitplayer\git\STATIC\SUPRIME\WhatsApp Unknown 2022-08-18 at 6.48.33 PM\WhatsApp Image 2022-08-15 at 1.49.13 PM.jpeg' %}" width="200" height="200"> 
+                <div class="carousel-caption">
+              
+                </div>
+              </div> 
+              <div class="item"> 
+                <img SRC="{% static 'D:\R folder\STUDY\gitplayer\gitplayer\git\STATIC\SUPRIME\WhatsApp Unknown 2022-08-18 at 6.48.33 PM\WhatsApp Image 2022-08-15 at 1.50.14 PM.jpeg' %}" width="300" height="300"> 
+                <div class="carousel-caption">
+                 
+                </div>      
+             </div> 
+              <div class="item"> 
+                <img SRC="{% static 'D:\R folder\STUDY\gitplayer\gitplayer\git\STATIC\SUPRIME\WhatsApp Unknown 2022-08-18 at 6.48.33 PM\WhatsApp Image 2022-08-15 at 1.51.07 PM.jpeg' %}" width="300" height="300"> 
+                <div class="carousel-caption">
+                
+                </div>          
+              </div>
+              <div class="item"> 
+                <img SRC="{% static 'D:\R folder\STUDY\gitplayer\gitplayer\git\STATIC\SUPRIME\WhatsApp Unknown 2022-08-18 at 6.48.33 PM\WhatsApp Image 2022-08-15 at 1.54.02 PM.jpeg' %}" width="300" height="300">
+                <div class="carousel-caption">
+                 >
+                </div>           
+              </div> 
+               
+            </div> 
+            
+            <!-- Next / Previous controls here -->
+            <a class="left carousel-control" href="#carousel-demo" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-demo" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+            </a>
+          
+           <div>
+          
+           </div> 
+            </div><br><br><br><br><br><br>
+</body>
+</html>
+
+{% endblock body %}

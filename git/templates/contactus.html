@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block body %}
+{% csrf_token %}
+<html>
+<head>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css" integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+
+<style>
+
+.parent {
+        margin-left: 10px;
+        background: #CCCCCC;
+        height: 700px;
+        width: 1700px;
+        position: relative;
+        }
+
+.myDiv {
+  display: block;
+  
+     
+  
+  padding : 1%;
+  color: Black;
+  
+  
+  width: 1700px;
+  height: 100px;
+  position: absolute;
+  top: 70%;
+  left: 1%;
+  
+}
+</style>
+</head>
+<body background-color>
+
+<div class="parent">
+  <h4 style="color:#0099cc"> <b><i>Contact Us:</i></b></h4>
+
+  <h5><b> Managing Director </b> : Nilesh Karanje  <h5>
+  <h5> <b>Mobile:</b> +919067817246, 8446257463 <h5>  
+  <h5> <b>E mail :</b>nileshkaranje1010@gmail.com <h5> <br> <br>
+  <h5><b> Managing Director </b> : Vishal Jankar  <h5>
+  <h5> <b>Mobile :</b> 9322256030 <h5>  
+  <h5><b> E mail :</b>vishaljankar110@gmail.com <h5> <br> <br>
+    <h5> <b>Mail For Details Information :</b> infosuprimeindustries@gmail.com <h5>
+
+    
+  </div>
+
+<div class="myDiv">
+   
+    
+    
+    <form  class="grid"  action="contactus" method="post";>{% csrf_token %}
+    
+    <br><h4>Inqury  :  </h4> <br>
+    <label for="lname">Name  :  </label>
+    <input type="input" id="name" name="name"> 
+
+    <label for="lAddr">Address:</label>
+    <input type="input" id="Addr" name="Addr">
+
+    <label for="lmobile">Tel No :</label>
+    <input type="input" id="mobile" name="mobile">
+    <label for="lmail">Mail Id.:   </label>
+    <input type="input" id="mail" name="mail"><br>
+
+    <label for="lIABOUT">Inquiry About:   </label><br>
+    <textarea id="Inquiry" name="Inquiry" rows="2" cols="110" >type here</textarea>
+
+    <input type="submit"  >
+    
+  </form></div>
+
+
+  {% endblock body %}
+  
